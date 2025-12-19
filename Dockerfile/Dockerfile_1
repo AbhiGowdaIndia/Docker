@@ -1,0 +1,20 @@
+ARG BASE_IMAGE=ubuntu:22.04
+FROM ${BASE_IMAGE}
+MAINTAINER AbhishekaB <abhisheka@example.com>
+LABEL app="sample-dockerfile"
+LABEL environment="demo"
+ENV APP_ENV=production
+ENV APP_PORT=8080
+WORKDIR /app
+ADD sample.tar.gz /app/
+COPY app.sh /app/app.sh
+COPY config/ /app/config/
+RUN apt-get update && \
+    apt-get install -y curl && \
+    chmod +x /app/app.sh && \
+    useradd -m appuser
+USER appuser
+EXPOSE 8080
+VOLUME ["/app/data"]
+ENTRYPOINT ["/app/app.sh"]
+CMD ["--start"]
