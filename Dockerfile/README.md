@@ -91,3 +91,16 @@ ENTRYPOINT ["/app/app.sh"]
 # =========================
 CMD ["--start"]
 ```
+
+### Common Dockerfile Instructions
+
+#### ARG
+
+  * Build-time Variable
+
+  * Defines a variable used only during image build
+
+  * Can be overridden at build time:
+
+    **docker build --build-arg BASE_IMAGE=ubuntu:20.04 .**
+
