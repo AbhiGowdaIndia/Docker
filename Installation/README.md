@@ -28,7 +28,7 @@ git --version
 
 ### Ubuntu / Debian
 
-'''cmd
+```cmd
 sudo apt update
 sudo apt install git -y
 ```
