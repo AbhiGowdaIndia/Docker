@@ -104,3 +104,47 @@ CMD ["--start"]
 
     **docker build --build-arg BASE_IMAGE=ubuntu:20.04 .**
 
+#### FROM
+
+  * Specifies the base image
+
+  * Mandatory (except for scratch images)
+
+  * Example:
+
+  ```dockerfile
+  FROM ubuntu:22.04
+  ```
+#### MAINTAINER
+
+  * MAINTAINER wass used to specify the image author, but it is deprecated and replaced by the LABEL instruction.
+
+  Example:
+
+  ```dockerfile
+  MAINTAINER Abhisheka B <abhisheka@example.com>
+  ```
+#### LABEL
+
+  * Image Metadata
+
+  * Adds metadata to the image
+
+  * Replacement for deprecated MAINTAINER
+
+  * Useful for automation, documentation, filtering images
+
+  * Example:
+
+  ```dockerfile
+  LABEL maintainer="AbhishekaB <abhisheka@example.com>"
+  LABEL app="sample-dockerfile"
+  LABEL environment="demo"
+  ```
+
+  * To check Label
+
+  ```cmd
+  docker inspect image_name
+  ```
+
