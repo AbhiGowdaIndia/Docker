@@ -27,14 +27,15 @@ git --version
 ### Install Git on Linux
 
 ### Ubuntu / Debian
-'''bash
+
+'''cmd
 sudo apt update
 sudo apt install git -y
 ```
 
 ### RHEL / CentOS / Amazon Linux
 
-```bash
+```cmd
 sudo yum install git -y
 ```
 
