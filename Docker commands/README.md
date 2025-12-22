@@ -136,7 +136,7 @@
   * Force remove
 
     ```cmd
-    docker -f rm <container-name or ID>
+    docker rm -f <container-name or ID>
     ```
 
 ### Container interaction commands
@@ -346,7 +346,7 @@
 
       ```cmd
       docker run -it --entrypoint echo --name <conatiner-name> <image-name> "hello world"
-      ``
+      ```
 
     * here the command which will executed will be **echo "hello world"**
 
@@ -360,7 +360,8 @@
 
   ```cmd
   docker logs -f <container-name or ID>
-  ``
+  ```
+
 * Create a new Docker image from an existing container’s current state
 
   ```cmd
@@ -408,7 +409,6 @@
     docker run --mount type=volume,source=mydata,target=/data nginx
     ```
 
-* 
 
 
 
